@@ -1,0 +1,13 @@
+# Ignore Eclipse files
+.classpath
+.project
+.settings/
+bin/
+
+# Ignore Maven compiled files
+target/
+dependency-reduced-pom.xml
+
+# Ignore Reports
+test-output/
+SparkReport.html

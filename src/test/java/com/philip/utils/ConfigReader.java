@@ -1,0 +1,29 @@
+package com.philip.utils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class ConfigReader {
+  private static Properties properties;
+  
+  // This "static block" runs automatically as soon as the project starts
+  static {
+	  try {
+		  // This points to the file you just created
+		  String path = "src/test/resources/config.properties";
+		  
+		  FileInputStream input = new FileInputStream(path);
+		  properties = new Properties();
+		  properties.load(input);
+		  input.close();							  
+	  }  catch (IOException e) {
+		  e.printStackTrace();
+		  throw new RuntimeException("Config file not found at src/test/resources/config.properties");
+	  }
+  }
+  
+  public static String getProperty(String key) {
+	  return properties.getProperty(key);
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Regression Suite">
+
+
+  <listeners>
+    <listener class-name="com.philip.utils.TestListener"/>
+  </listeners>
+  
+  <test name="Login Tests">
+    <classes>
+      <class name="com.philip.tests.LoginTest"/>
+      <class name="com.philip.tests.LoginFailTest"/>
+    </classes>
+  
+  </test>
+
+
+</suite>
