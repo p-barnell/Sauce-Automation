@@ -18,7 +18,7 @@ public class LoginFailTest extends BaseTest {
 		
 		//2. Check error message is on screen
 		String errorMessage = loginPage.getErrorMessage();
-		System.out.println("Error found" + errorMessage);
+		System.out.println("Error found " + errorMessage);
 		
 		//3. Verify the text matches completely
 		Assert.assertTrue(errorMessage.contains("Sorry, this user has been locked out"));

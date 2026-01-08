@@ -12,6 +12,7 @@
     <classes>
       <class name="com.philip.tests.LoginTest"/>
       <class name="com.philip.tests.LoginFailTest"/>
+      <class name="com.philip.tests.ShoppingTest"/>
     </classes>
   
   </test>
