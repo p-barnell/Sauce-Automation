@@ -18,6 +18,7 @@ public class InventoryPage {
 	private By itemNames = By.className("inventory_item_name");
 	private By addToCartButtons = By.xpath("//button[text()='Add to cart']");
 	private By cartBadge = By.className("shopping_cart_badge");
+	private By cartLink = By.className("shopping_cart_link");
 	
 	public InventoryPage (WebDriver driver) {
 		this.driver = driver;		
@@ -66,5 +67,12 @@ public class InventoryPage {
 		String count = driver.findElement(cartBadge).getText();
 		System.out.println("Count value is " + count);
 		return Integer.parseInt(count);		
+	}
+	
+	public void clickShoppingCart() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cartLink));	  
+		driver.findElement(cartLink).click();
+		
+		
 	}
 }
